@@ -1,11 +1,16 @@
-import React from 'react';
+import { useState, useEffect } from "react";
+import { getDocs } from "firebase/firestore";
 
 const Home = () => {
-    return (
-        <div>
-            Home
-        </div>
-    );
-}
+  const [postLists, setPostLists] = useState([]);
+
+    useEffect(() =>{
+        const getPosts = async () => {
+            const data = await getDocs();
+        }
+    })
+
+  return <div>Home</div>;
+};
 
 export default Home;
